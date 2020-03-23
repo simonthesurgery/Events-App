@@ -1,0 +1,151 @@
+<app-page-header Title="Event: Live"></app-page-header>
+
+<ion-content>
+	<div *ngIf="!Connected" class="connect">
+		<h5>Activity Code</h5>
+		<form>
+			<div class="code-input">
+				<ion-input maxLength="1" inputmode="numeric" clearOnEdit="true"></ion-input>
+				<ion-input maxLength="1" inputmode="numeric" clearOnEdit="true"></ion-input>
+				<ion-input maxLength="1" inputmode="numeric" clearOnEdit="true"></ion-input>
+				<ion-input maxLength="1" inputmode="numeric" clearOnEdit="true"></ion-input>
+			</div>
+		</form>
+		<ion-button (click)="DebugConnect()" color="success">Connect</ion-button>
+		<ion-text *ngIf="Error" color="danger">Connection Failed</ion-text>
+	</div>
+
+	<div *ngIf="Connected" class="content">
+		<ng-container *ngIf="Action == null || Action == '' || (Action != 'QA' && Action !='VOTE' && Action != 'QUIZ')">
+			<ion-icon color="success" name="checkmark-circle-outline"></ion-icon>
+			<h5>Connected!</h5>
+			<ion-text>Awaiting Instruction</ion-text>
+			<br>
+			<ion-spinner name="crescent"></ion-spinner>
+		</ng-container>
+
+		<ng-container *ngIf="Action == 'QA'">
+			<h3>Ask a Question</h3>
+			<form class="qa" *ngIf="!Submitted">
+				<ion-input placeholder="Your Question Here..."></ion-input>
+				<ion-button (click)="DebugSubmit()" expand="block">Submit</ion-button>
+			</form>
+			
+			<ng-container *ngIf="Submitted">
+				<ion-icon color="success" name="checkmark-circle-outline"></ion-icon>
+				<ion-text>Your question has been submitted!</ion-text>
+				<ion-button (click)="DebugSubmit()">Ask another question</ion-button>
+			</ng-container>
+		</ng-container>
+
+		<ng-container *ngIf="Action == 'VOTE'">
+			<h3>What's your favourite colour?</h3>
+			<div class="vote" *ngIf="!Submitted">
+				<ion-button (click)="DebugSubmit('A')" class="blue">
+					<ion-icon name="water-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('B')" class="red">
+					<ion-icon name="bonfire-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('C')" class="green">
+					<ion-icon name="leaf-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('D')" class="yellow">
+					<ion-icon name="sunny-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('E')" class="purple">
+					<ion-icon name="rose-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('F')" class="orange">
+					<ion-icon name="snow-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('G')" class="black">
+					<ion-icon name="moon-outline"></ion-icon>
+				</ion-button>
+				<ion-button (click)="DebugSubmit('H')" class="white">
+					<ion-icon name="cloud-outline"></ion-icon>
+				</ion-button>
+			</div>
+			<ng-container *ngIf="Submitted">
+				<ion-icon color="success" name="checkmark-circle-outline"></ion-icon>
+				<ion-text>Your vote has been submitted!</ion-text>
+			</ng-container>
+		</ng-container>
+
+		<ng-container *ngIf="Action == 'QUIZ'">
+			<h3>Mental Wellbeing Quiz</h3>
+			<form class="quiz" *ngIf="!Submitted">
+				<ion-list>
+					<ion-item>
+						<ion-label>Are you breathtaking?</ion-label>
+						<ion-select>
+							<ion-select-option>Yes</ion-select-option>
+						</ion-select>
+					</ion-item>
+					<ion-item>
+						<ion-label>Are you an amazing person?</ion-label>
+						<ion-select>
+							<ion-select-option>Yes</ion-select-option>
+						</ion-select>
+					</ion-item>
+					<ion-item>
+						<ion-label>Are you talented?</ion-label>
+						<ion-select>
+							<ion-select-option>Yes</ion-select-option>
+						</ion-select>
+					</ion-item>
+					<ion-item>
+						<ion-label>Are you strong?</ion-label>
+						<ion-select>
+							<ion-select-option>Yes</ion-select-option>
+						</ion-select>
+					</ion-item>
+					<ion-item>
+						<ion-label>Are you brilliant?</ion-label>
+						<ion-select>
+							<ion-select-option>Yes</ion-select-option>
+						</ion-select>
+					</ion-item>
+					<ion-item>
+						<ion-label>What's your favourite colour?</ion-label>
+						<ion-select>
+							<ion-select-option>Blue</ion-select-option>
+							<ion-select-option>Red</ion-select-option>
+						</ion-select>
+					</ion-item>
+				</ion-list>
+				<ion-button expand="block" (click)="DebugSubmit()">Submit</ion-button>
+			</form>
+			
+			<ng-container *ngIf="Submitted">
+				<ion-icon color="success" name="checkmark-circle-outline"></ion-icon>
+				<ion-text>Your answers have been submitted!</ion-text>
+			</ng-container>
+		</ng-container>
+	</div>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-buttons>
+			<ion-button *ngIf="Connected" (click)="DebugConnect()">
+				<ion-icon slot="start" name="log-out-outline"></ion-icon>
+				<ion-label>Disconnect</ion-label>
+			</ion-button>
+		</ion-buttons>
+		<ion-buttons slot="end">
+			<ion-button *ngIf="Connected" (click)="DebugChangeMode('QA')">
+				<ion-label>Q&A</ion-label>
+			</ion-button>
+			<ion-button *ngIf="Connected" (click)="DebugChangeMode('VOTE')">
+				<ion-label>Vote</ion-label>
+			</ion-button>
+			<ion-button *ngIf="Connected" (click)="DebugChangeMode('QUIZ')">
+				<ion-label>Quiz</ion-label>
+			</ion-button>
+			<ion-button *ngIf="Connected" (click)="DebugChangeMode('')">
+				<ion-label>Clear</ion-label>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-footer>

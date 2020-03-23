@@ -1,0 +1,75 @@
+<app-page-header Title="Important Information"></app-page-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<div>
+				<h4>Safety Information</h4>
+				<ul>
+					<li>Please follow any signage regarding area closures and safety notices</li>
+				</ul>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h4>Emergency Contacts</h4>
+				<ion-grid>
+					<ion-row>
+						<ion-col>Emergency Services</ion-col>
+						<ion-col>999</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>Site Manager</ion-col>
+						<ion-col>00000 0000000</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>Event Team</ion-col>
+						<ion-col>00000 0000000</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h4>Local Laws and Regulations</h4>
+				<ul>
+					<li>Alcohol is not available to under 21s</li>
+					<li>You must use designated crossings when crossing streets and roads</li>
+				</ul>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h4>Accessibility Information</h4>
+				<ul>
+					<li>The front entrance is not accessible to wheelchair users, follow the signs to the wheelchar accessible entrance</li>
+					<li>Some of the presentations will contain flashing lights. Ask a member of staff for details</li>
+				</ul>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h4>Allergy Information</h4>
+				<ul>
+					<li>If you have any allergy concerns or requirements for the provided catering, please contact the event organisers</li>
+				</ul>
+				<ion-grid>
+					<ion-row>
+						<ion-col>Event Team</ion-col>
+						<ion-col>00000 0000000</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>Catering Team</ion-col>
+						<ion-col>00000 0000000</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-item>
+		<ion-item [routerLink]="'/policies'" detail="true"><h4>Policies</h4></ion-item>
+		<ion-item [routerLink]="'/policies'" detail="true"><h4>Legal</h4></ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar></ion-toolbar>
+</ion-footer>

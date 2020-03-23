@@ -1,0 +1,31 @@
+<ion-toolbar>
+	<ion-buttons slot="start">
+		<ion-button (click)="ChangeMonth('Prev')">
+			<ion-icon name="chevron-back"></ion-icon>
+		</ion-button>
+		<ion-button (click)="Reset()">Today</ion-button>
+	</ion-buttons>
+	<ion-title>{{_DatePipe.transform(SelectedDate, "MMMM yyyy")}}</ion-title>
+	<ion-buttons slot="end">
+		<ion-button (click)="ChangeMonth('Next')">
+			<ion-icon name="chevron-forward"></ion-icon>
+		</ion-button>
+	</ion-buttons>
+</ion-toolbar>
+<ion-grid class="Calendar">
+	<ion-row class="days">
+		<ion-col>Sun</ion-col>
+		<ion-col>Mon</ion-col>
+		<ion-col>Tue</ion-col>
+		<ion-col>Wed</ion-col>
+		<ion-col>Thu</ion-col>
+		<ion-col>Fri</ion-col>
+		<ion-col>Sat</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col *ngFor="let Day of Days" [ngClass]="CalculateClass(Day)" (click)="SelectDay(Day)">{{Day}}</ion-col>
+	</ion-row>
+</ion-grid>
+<ion-list>
+	<app-event-listing></app-event-listing>
+</ion-list>

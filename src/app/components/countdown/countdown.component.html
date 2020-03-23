@@ -1,0 +1,35 @@
+<ion-card *ngIf="CountdownEnabled">
+	<ion-card-header>
+		<ion-card-subtitle>Countdown<span class="ion-float-right">20th March 2020</span></ion-card-subtitle>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<ion-card-title>{{Countdown.Days}}</ion-card-title>
+				</ion-col>
+				<ion-col>
+					<ion-card-title>{{Countdown.Hours}}</ion-card-title>
+				</ion-col>
+				<ion-col>
+					<ion-card-title>{{Countdown.Minutes}}</ion-card-title>
+				</ion-col>
+				<ion-col>
+					<ion-card-title>{{Countdown.Seconds}}</ion-card-title>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<ion-card-subtitle>Days</ion-card-subtitle>
+				</ion-col>
+				<ion-col>
+					<ion-card-subtitle>Hours</ion-card-subtitle>
+				</ion-col>
+				<ion-col>
+					<ion-card-subtitle>Minutes</ion-card-subtitle>
+				</ion-col>
+				<ion-col>
+					<ion-card-subtitle>Seconds</ion-card-subtitle>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-card-header>
+</ion-card>

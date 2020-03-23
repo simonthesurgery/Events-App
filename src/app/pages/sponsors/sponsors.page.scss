@@ -1,0 +1,11 @@
+.sponsors {
+	display: flex;
+	width: 100%;
+	flex-flow: row wrap;
+
+	img {
+		max-width: 25vw;
+		max-height: 25vw;
+	}
+}
+

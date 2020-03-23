@@ -1,0 +1,51 @@
+<app-page-header [Title]="TalkData.title"></app-page-header>
+
+<ion-content>
+	<ion-card>
+		<ion-card-header>
+			<ion-card-title>20th March 2020</ion-card-title>
+			<ion-card-subtitle>{{TalkData.starttime}} - {{TalkData.endtime}} <span class="ion-float-right">Room {{TalkData.room}}</span></ion-card-subtitle>
+		</ion-card-header>
+	</ion-card>
+	<ion-toolbar>
+		<ion-title>Abstract</ion-title>
+	</ion-toolbar>
+	<ion-text>
+		Blah blah blah
+	</ion-text>
+
+	<ion-toolbar>
+		<ion-title>Presenters</ion-title>
+	</ion-toolbar>
+	<app-people></app-people>
+
+	<ion-toolbar>
+		<ion-title>Further Reading</ion-title>
+	</ion-toolbar>
+	<ion-list>
+		<ion-item>
+			<div>
+				<h1>Some relevant paper or something</h1>
+				<h2>Authors and date here</h2>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h1>Some relevant paper or something</h1>
+				<h2>Authors and date here</h2>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h1>Some relevant paper or something</h1>
+				<h2>Authors and date here</h2>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div>
+				<h1>Some relevant paper or something</h1>
+				<h2>Authors and date here</h2>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>

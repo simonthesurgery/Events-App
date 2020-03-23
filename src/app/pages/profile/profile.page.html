@@ -1,0 +1,40 @@
+<app-header *ngIf="IsCurrentUser" Title="Profile"></app-header>
+<app-page-header *ngIf="!IsCurrentUser" Title="Profile"></app-page-header>
+
+<ion-content>
+	<img class="cover-picture"
+		[src]="ProfileData.picture.cover">
+	<img class="profile-picture" [src]="ProfileData.picture.profile">
+	<img class="company-logo" src="https://ineedsurgery.com/wp-content/themes/thesurgery/images/surgery-logo.svg">
+	<div class="content">
+		<h1>{{ProfileData.firstname}} {{ProfileData.lastname}}</h1>
+		<div class="actions">
+			<ion-button fill="outline">
+				<ion-icon slot="start" name="chatbubble-outline"></ion-icon>
+				Send Message
+			</ion-button>
+			<ion-button fill="outline">
+				<ion-icon slot="start" name="person-add-outline"></ion-icon>
+				Connect
+			</ion-button>
+			<ion-button fill="outline" color="success">
+				<ion-icon slot="start" name="checkmark-outline"></ion-icon>
+				Connected
+			</ion-button>
+		</div>
+		<ion-list>
+			<ion-item>
+				<ion-icon slot="start" name="business-outline"></ion-icon>
+				The Surgery
+			</ion-item>
+			<ion-item>
+				<ion-icon slot="start" name="mail-outline"></ion-icon>
+				{{ProfileData.contact.email}}
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<app-event-listing></app-event-listing>
+		</ion-list>
+	</div>
+</ion-content>

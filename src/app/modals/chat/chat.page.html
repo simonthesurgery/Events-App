@@ -1,0 +1,24 @@
+<app-modal-header Title="Chat"></app-modal-header>
+
+<ion-content #Content>
+	<ion-card *ngFor="let _Message of Messages">
+		<ion-card-header>
+			<ion-card-subtitle>{{_Message.Sender.Name}}<span class="ion-float-right">{{_Message.Timestamp}}</span></ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			{{_Message.Content}}
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-textarea padding-start="10px" id="Input" type="text" placeholder="Say something..." [(ngModel)]="MessageContent"
+			(keyup.enter)="SendMessage(MessageContent)"></ion-textarea>
+		<ion-buttons slot="end">
+			<ion-button (click)="SendMessage(MessageContent)" slot="icon-only">
+				<ion-icon name="send-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-footer>

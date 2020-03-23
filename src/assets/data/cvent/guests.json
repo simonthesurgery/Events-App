@@ -1,0 +1,53 @@
+[
+	{
+		"ContactId": "",
+		"EventId": "",
+		"EventTitle": "",
+		"EventCode": "",
+		"GuestConfirmationNumber": "",
+		"RegistrationId": "",
+		"FirstName": "",
+		"MiddleName": "",
+		"LastName": "",
+		"NickName": "",
+		"Gender": "",
+		"DateOfBirth": "",
+		"SocialSecurityNumber": "",
+		"NationalIdentificationNumber": "",
+		"PassportNumber": "",
+		"PassportCountry": "",
+		"Company": "",
+		"Designation": "",
+		"Title": "",
+		"Phone": "",
+		"Mobile": "",
+		"Email": "",
+		"CCEmail": "",
+		"Address1": "",
+		"Address2": "",
+		"Address3": "",
+		"City": "",
+		"State": "",
+		"RegistrationDate": "",
+		"CreatedDate": "",
+		"CreatedBy": "",
+		"LastModifiedDate": "",
+		"LastModifiedBy": "",
+		"LastOptOutDate": "",
+		"OptedOut": "",
+		"Participant": "",
+		"Status": "",
+		"Country": "",
+		"CountryCode": "",
+		"PostalCode": "",
+		"IsObfuscated": "",
+		"CustomFieldDetail": [
+			{
+				"FieldId": "",
+				"FieldName": "",
+				"FieldType": "",
+				"FieldValue": ""
+			}
+		]
+	}
+]

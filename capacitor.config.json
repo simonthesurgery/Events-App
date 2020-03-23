@@ -1,0 +1,8 @@
+{
+  "appId": "com.bayer.events",
+  "appName": "EventsApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

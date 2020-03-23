@@ -1,0 +1,19 @@
+.address {
+	display: flex;
+	flex-direction: row-reverse;
+	min-height: 250px;
+
+	ion-grid {
+		width: 40%;
+
+		ion-col {
+			padding: 0px;
+		}
+	}
+
+	.map {
+		width: 60%;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
+}

@@ -1,0 +1,59 @@
+<ion-card>
+	<div class="toggle" *ngIf="!_Open" (click)="Open()">
+		<ion-icon name="reorder-two-outline"></ion-icon>
+	</div>
+	<div *ngIf="_Open">
+		<div class="status">
+			<ng-container>
+				<ion-text color="success">This event is currently open for registration</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-text color="warning">This event is open for registration but you will be placed in a waiting list</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-text color="danger">This event is not open for registration at this time</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-text color="warning">This event is invite only</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-icon color="success" name="checkmark-outline"></ion-icon>
+				<ion-text>You're going to this event</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-icon color="warning" name="alert-outline"></ion-icon>
+				<ion-text>You've been invited to this event</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-icon color="warning" name="time-outline"></ion-icon>
+				<ion-text>You're on the waiting list for this event</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-icon color="warning" name="time-outline"></ion-icon>
+				<ion-text>Your registration is pending</ion-text>
+			</ng-container>
+			<ng-container>
+				<ion-icon color="danger" name="close-outline"></ion-icon>
+				<ion-text>You declined the invitation</ion-text>
+			</ng-container>
+		</div>
+	
+		<div class="options">
+			<ion-button>
+				Watch
+			</ion-button>
+			<ion-button>
+				Register
+			</ion-button>
+			<ion-button color="success">
+				Accept
+			</ion-button>
+			<ion-button color="danger">
+				Decline
+			</ion-button>
+		</div>
+		<div class="toggle" (click)="Close()">
+			<ion-icon name="reorder-two-outline"></ion-icon>
+		</div>
+	</div>
+</ion-card>

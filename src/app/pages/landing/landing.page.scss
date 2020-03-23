@@ -1,0 +1,28 @@
+.actions {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.action {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	ion-icon {
+		min-height: 25px;
+		min-width: 50px;
+		margin-bottom: 5px;
+	}
+	
+	ion-button {
+		min-height: 50px;
+		max-width: 15%;
+	}
+
+	ion-label {
+		font-size: x-small;
+	}
+}

@@ -1,0 +1,36 @@
+<ion-refresher slot="fixed">
+	<ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+</ion-refresher>
+<ion-infinite-scroll>
+	<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more posts...">
+		<ion-card class="post" *ngFor="let Post of _PostsService.Posts">
+			<ion-card-header>
+				<img class="profile-picture"
+					[src]="_UsersService.GetUserData(Post.author, 'picture')">
+				<ion-card-subtitle>{{_UsersService.GetUserData(Post.author, 'name')}}<span class="ion-float-right">{{Post.date}}</span>
+				</ion-card-subtitle>
+				<ion-card-title>{{Post.title}}</ion-card-title>
+		
+			</ion-card-header>
+		
+			<ion-card-content>
+				{{Post.content}}
+			</ion-card-content>
+		
+			<div class="post-actions">
+				<ion-button fill="none">
+					<ion-icon slot="start" name="heart-outline"></ion-icon>
+					<ion-label>Like</ion-label>
+				</ion-button>
+				<ion-button (click)="OpenCommentsModal(Post)" fill="none">
+					<ion-icon slot="start" name="chatbox-outline"></ion-icon>
+					<ion-label>Comment</ion-label>
+				</ion-button>
+				<ion-button fill="none">
+					<ion-icon slot="start" name="share-outline"></ion-icon>
+					<ion-label>Share</ion-label>
+				</ion-button>
+			</div>
+		</ion-card>
+	</ion-infinite-scroll-content>
+</ion-infinite-scroll>

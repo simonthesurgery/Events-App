@@ -1,0 +1,37 @@
+[{
+	"title": "Home",
+	"icon": "home",
+	"route": "/home"
+},{
+	"title": "Notifications",
+	"icon": "notifications",
+	"route": "/notifications"
+},{
+	"title": "Your Profile",
+	"icon": "person",
+	"route": "/profile"
+},{
+	"title": "Your Calendar",
+	"icon": "calendar",
+	"route": "/calendar"
+},{
+	"title": "Messages",
+	"icon": "chatbubbles",
+	"route": "/messages"
+},{
+	"title": "Connections",
+	"icon": "people",
+	"route": "/connections"
+},{
+	"title": "Transactions",
+	"icon": "card",
+	"route": "/transactions"
+},{
+	"title": "Tickets",
+	"icon": "qr-code",
+	"route": "/tickets"
+},{
+	"title": "Settings",
+	"icon": "settings",
+	"route": "/settings"
+}]

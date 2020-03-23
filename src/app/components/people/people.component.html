@@ -1,0 +1,9 @@
+<ion-searchbar></ion-searchbar>
+<ion-list>
+	<ion-item *ngFor="let User of _UsersService.Users" (click)="OpenProfile(User)">
+		<img class="chat-picture" [src]="User.picture.profile">
+		<div>
+			<h1>{{User.firstname}} {{User.lastname}}</h1>
+		</div>
+	</ion-item>
+</ion-list>

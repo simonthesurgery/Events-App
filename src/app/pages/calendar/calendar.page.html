@@ -1,0 +1,25 @@
+<app-header Title="Your Calendar"></app-header>
+
+<ion-content *ngIf="CalendarView">
+	<app-up-next [routerLink]="'/landing'" Title="Animal Crossing: New Horizons" Date="20/03/20 00:00"></app-up-next>
+	<app-calendar></app-calendar>
+</ion-content>
+
+<ion-content *ngIf="!CalendarView">
+	<app-event-listing></app-event-listing>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-buttons slot="end">
+			<ion-button *ngIf="CalendarView" (click)="ChangeView()">
+				<ion-icon slot="start" name="list-outline"></ion-icon>
+				<ion-label>List View</ion-label>
+			</ion-button>
+			<ion-button *ngIf="!CalendarView" (click)="ChangeView()">
+				<ion-icon slot="start" name="calendar-outline"></ion-icon>
+				<ion-label>Calendar View</ion-label>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-footer>

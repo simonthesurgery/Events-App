@@ -1,0 +1,30 @@
+.post {
+	text-align: left;
+
+	ion-card-subtitle {
+		margin-top: 0px;
+	}
+
+	ion-card-title {
+		margin-top: 9px;
+	}
+	
+	.profile-picture {
+		max-width: 50px;
+		border-radius: 100px;
+		float: left;
+		margin-right: 10px;
+	}
+
+	ion-card-content {
+		padding-bottom: 10px;
+	}
+
+	.post-actions {
+		display:flex;
+		justify-content: space-around;
+		ion-button {
+			min-width: calc(100% / 3);
+		}
+	}
+}

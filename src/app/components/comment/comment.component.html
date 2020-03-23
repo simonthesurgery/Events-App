@@ -1,0 +1,13 @@
+<ion-item *ngIf="CommentData">
+	<img class="profile-picture"
+			[src]="_UsersService.GetUserData(CommentData.author, 'picture')">
+	<div>
+		<h1>{{CommentData.content}}</h1>
+		<h2>{{_UsersService.GetUserData(CommentData.author, 'name')}} - {{CommentData.date}}</h2>
+		<ion-list>
+			<!-- <ng-container *ngFor="let sub of CommentData.subcomments">
+				<app-comment CommentUID="sub"></app-comment>
+			</ng-container> -->
+		</ion-list>
+	</div>
+</ion-item>

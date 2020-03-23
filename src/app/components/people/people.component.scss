@@ -1,0 +1,48 @@
+ion-item {
+	cursor: pointer;
+}
+
+h1 {
+	font-size: medium;
+	margin: 0px;
+}
+
+h2 {
+	font-size: small;
+	margin: 0px;
+	font-weight: normal;
+	color: gray;
+}
+
+h3 {
+	text-align: center;
+	font-weight: normal;
+	font-size: medium;
+	color: gray;
+	margin: 0px;
+	margin-left: auto;
+}
+
+.chat-picture {
+	width: 50px;
+	border-radius: 100px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+.online {
+	border: 2px solid var(--ion-color-success);
+}
+
+.away {
+	border: 2px solid var(--ion-color-warning);
+}
+
+.dnd {
+	border: 2px solid var(--ion-color-danger);
+}
+
+.offline {
+	border: 2px solid gray;
+}

@@ -1,0 +1,32 @@
+ion-grid {
+	border-top: 1px solid var(--ion-color-primary);
+	border-bottom: 1px solid var(--ion-color-primary);
+}
+
+ion-col {
+	max-width: calc(100% / 7);
+	min-width: calc(100% / 7);
+	text-align: center;
+	min-height: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.days {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.blank {
+	background-color: #fafafa;
+}
+
+.selected {
+	background-color: var(--ion-color-primary)!important;
+	color: white
+}
+
+.today {
+	border: 1px solid var(--ion-color-secondary);
+}

@@ -1,0 +1,50 @@
+.cover-picture {
+	width: 100%;
+	max-height: 150px;
+	object-fit: cover;
+}
+
+.profile-picture {
+	max-height: 150px;
+	border-radius: 100px;
+	margin-top: -75px;
+	margin-left: calc(50% - 75px);
+	border: 5px solid white;
+}
+
+.company-logo {
+	max-width: 50px;
+	min-height: 50px;
+	border-radius: 100px;
+	border: 5px solid white;
+	margin-left: -50px;
+	background-color: white;
+}
+
+.content {
+	padding: 10px;
+	padding-top: 0px;
+
+	h1 {
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	h2 {
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+
+	h4 {
+		margin-top: 0px;
+		margin-bottom: 5px;
+		color: gray;
+	}
+
+	.actions {
+		display: flex;
+		justify-content: center;
+		border-bottom: 1px solid #f0f0f0;
+		padding: 5px;
+	}
+}

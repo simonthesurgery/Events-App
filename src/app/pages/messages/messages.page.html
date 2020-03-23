@@ -1,0 +1,51 @@
+<app-header Title="Messages"></app-header>
+
+<ion-content>
+	<ion-list lines="none">
+		<ion-item (click)="OpenChat()">
+			<img class="chat-picture online"
+				src="https://ineedsurgery.com/wp-content/uploads/2018/10/Matt-4Z1A1836-500x500.jpg">
+			<div>
+				<h1>Matthew Prudente</h1>
+				<h2>Matthew: Hello there.</h2>
+			</div>
+			<h3>09/03/20 12:45</h3>
+		</ion-item>
+
+		<ion-item (click)="OpenChat()">
+			<img class="chat-picture away"
+				src="https://ineedsurgery.com/wp-content/uploads/2018/10/Nick-e1560285807423-500x500.jpg">
+			<div>
+				<h1>Nick Cordell</h1>
+				<h2>Nick sent you a photo</h2>
+			</div>
+			<h3>07/02/20 13:14</h3>
+		</ion-item>
+
+		<ion-item (click)="OpenChat()">
+			<img class="chat-picture offline"
+				src="https://ineedsurgery.com/wp-content/uploads/2018/10/PC-4Z1A0119-bw-500x500.jpg">
+			<div>
+				<h1>Paul Cohen</h1>
+				<h2>You: Hello</h2>
+			</div>
+			<h3>23/01/20 10:21</h3>
+		</ion-item>
+
+		<ion-item (click)="OpenChat()">
+			<img class="chat-picture dnd"
+				src="https://ineedsurgery.com/wp-content/uploads/2018/10/Adam-4Z1A0073-500x500.jpg">
+			<div>
+				<h1>Adam Smith</h1>
+				<h2>Do not disturb</h2>
+			</div>
+			<h3>20/01/20 15:22</h3>
+		</ion-item>
+		
+		<ion-item>
+			<ion-button expand="block">
+				Compose new message
+			</ion-button>
+		</ion-item>
+	</ion-list>
+</ion-content>
