@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe, WeekDay } from '@angular/common';
 import { Router } from '@angular/router';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
 	selector: 'app-calendar',
@@ -15,7 +16,8 @@ export class CalendarComponent implements OnInit {
 
 	constructor(
 		public _DatePipe: DatePipe,
-		public _Router: Router
+		public _Router: Router,
+		public _EventService: EventService
 	) { }
 
 	ngOnInit() {
@@ -170,6 +172,12 @@ export class CalendarComponent implements OnInit {
 
 		if (YMD == T) Class.push("today");
 		if (Day == D) Class.push("selected");
+
+		this._EventService.Events.forEach(_Item => {
+			let D = this._DatePipe.transform(_Item.date, "yyyy-MM-dd");
+
+			if(YMD == D) Class.push("busy");
+		});
 
 		return Class;
 	}

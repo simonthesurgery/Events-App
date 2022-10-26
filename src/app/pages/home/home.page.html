@@ -1,6 +1,6 @@
-<app-header Title="Events App Prototype"></app-header>
+<app-header Title="Event App Demo"></app-header>
 
 <ion-content>
-	<app-up-next Title="Animal Crossing: New Horizons" Date="20/03/20" routerLink="/landing"></app-up-next>
+	<app-up-next [Title]="_EventService.getNext().title" [Date]="_DatePipe.transform(_EventService.getNext().date, 'dd/MM/YY')" routerLink="/landing"></app-up-next>
 	<app-calendar></app-calendar>
 </ion-content>

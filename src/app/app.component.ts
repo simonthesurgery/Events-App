@@ -8,6 +8,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { IdentityService } from './services/identity.service';
 import { UsersService } from './services/users.service';
 import { CommentsService } from './services/comments.service';
+import { EventService } from './services/event.service';
 
 @Component({
 	selector: 'app-root',
@@ -25,7 +26,8 @@ export class AppComponent {
 		public _Router: Router,
 		public _UsersService: UsersService,
 		public _IdentityService: IdentityService,
-		public _CommentsService: CommentsService
+		public _CommentsService: CommentsService,
+		public _EventService: EventService
 	) {
 		this.initializeApp();
 

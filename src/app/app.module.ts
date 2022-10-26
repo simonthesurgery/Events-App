@@ -32,7 +32,7 @@ import { ComponentsModule } from './components/components.module';
 		HttpClientModule,
 		FormsModule,
 		ReactiveFormsModule,
-		ComponentsModule
+		ComponentsModule,
 	],
 	providers: [
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

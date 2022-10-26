@@ -21,7 +21,7 @@ export class CountdownComponent implements OnInit {
 	}
 
 	ngOnInit() { 
-		this.EventDate = new Date(2020, 2, 20, 0, 0);
+		this.EventDate = new Date(2023, 2, 8, 12, 0);
 		if (this.EventDate > Date.now()) this.CountdownEnabled = true;
 
 		if (this.CountdownEnabled) {

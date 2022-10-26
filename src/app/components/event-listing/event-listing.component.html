@@ -1,7 +1,7 @@
 <ion-searchbar></ion-searchbar>
-<ion-item (click)="OpenLandingPage()">
+<ion-item (click)="OpenLandingPage()" *ngFor="let _Item of _EventService.getEvents()">
 	<div>
-		<h2>Animal Crossing: New Horizons</h2>
-		<h4>20/03/20 00:00</h4>
+		<h2>{{_Item.title}}</h2>
+		<h4>{{_DatePipe.transform(_Item.date, "dd/MM/YY")}}</h4>
 	</div>
 </ion-item>
