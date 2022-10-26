@@ -14,10 +14,10 @@ export class ProfilePage implements OnInit {
 	ProfileData;
 
 	constructor(
-		private _Router: Router,
-		private _Route: ActivatedRoute,
-		private _UsersService: UsersService,
-		private _IdentityService: IdentityService
+		public _Router: Router,
+		public _Route: ActivatedRoute,
+		public _UsersService: UsersService,
+		public _IdentityService: IdentityService
 	) {
 		_Route.queryParams.subscribe(params => {
 			if (_Router.getCurrentNavigation().extras.state.UserData) {

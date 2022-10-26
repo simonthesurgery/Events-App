@@ -14,8 +14,8 @@ export class CommentComponent implements OnInit {
 	CommentData: any;
 
 	constructor(
-		private _CommentsService: CommentsService,
-		private _UsersService: UsersService
+		public _CommentsService: CommentsService,
+		public _UsersService: UsersService
 	) {
 		this._CommentsService.getComment(this.CommentUID).then(Data => {
 			this.CommentData = Data;

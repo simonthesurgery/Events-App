@@ -10,8 +10,8 @@ import { NavigationExtras, Router } from '@angular/router';
 export class PeopleComponent implements OnInit {
 
 	constructor(
-		private _UsersService: UsersService,
-		private _Router: Router
+		public _UsersService: UsersService,
+		public _Router: Router
 	) { }
 
 	ngOnInit() { }

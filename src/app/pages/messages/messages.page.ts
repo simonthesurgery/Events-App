@@ -9,7 +9,7 @@ import { ChatModal } from 'src/app/modals/chat/chat.page';
 export class MessagesPage implements OnInit {
 
 	constructor(
-		private _ModalCtrl: ModalController
+		public _ModalCtrl: ModalController
 	) { }
 
 	ngOnInit() {

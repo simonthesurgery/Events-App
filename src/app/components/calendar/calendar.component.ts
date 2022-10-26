@@ -9,20 +9,20 @@ import { Router } from '@angular/router';
 })
 export class CalendarComponent implements OnInit {
 
-	private Months: number[] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	public Months: number[] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 	public SelectedDate: string;
-	private Days: number[] = [];
+	public Days: number[] = [];
 
 	constructor(
-		private _DatePipe: DatePipe,
-		private _Router: Router
+		public _DatePipe: DatePipe,
+		public _Router: Router
 	) { }
 
 	ngOnInit() {
 		this.Reset();
 	}
 
-	ChangeMonth(Direction: string) {
+	public ChangeMonth(Direction: string) {
 		let Y = parseInt(this._DatePipe.transform(this.SelectedDate, "yyyy"));
 		let M = parseInt(this._DatePipe.transform(this.SelectedDate, "MM"));
 		let D = parseInt(this._DatePipe.transform(this.SelectedDate, "dd"));
@@ -62,12 +62,12 @@ export class CalendarComponent implements OnInit {
 		this.CalculateDays();
 	}
 
-	Reset() {
+	public Reset() {
 		this.SelectedDate = this._DatePipe.transform(Date.now(), "yyyy-MM-dd");
 		this.CalculateDays()
 	}
 
-	CalculateDays() {
+	public CalculateDays() {
 		let StartDay = this.CalculateStartDay();
 		let LeadingDays: number;
 		let M = parseInt(this._DatePipe.transform(this.SelectedDate, "MM"));
@@ -114,14 +114,14 @@ export class CalendarComponent implements OnInit {
 		}
 	}
 
-	CalculateStartDay() {
+	public CalculateStartDay() {
 		let YM = this._DatePipe.transform(this.SelectedDate, "yyyy-MM");
 		YM = YM + "-01";
 
 		return this._DatePipe.transform(YM, "E");
 	}
 
-	isLeapYear(): boolean {
+	public isLeapYear(): boolean {
 		let Y = parseInt(this._DatePipe.transform(this.SelectedDate, "yyyy"))
 
 		if (Y % 4 == 0) {
@@ -143,7 +143,7 @@ export class CalendarComponent implements OnInit {
 
 	}
 
-	SelectDay(Day) {
+	public SelectDay(Day) {
 		let YM = this._DatePipe.transform(this.SelectedDate, "yyyy-MM");
 		let D = Day.toString();
 
@@ -152,7 +152,7 @@ export class CalendarComponent implements OnInit {
 		this.SelectedDate = YM + "-" + D;
 	}
 
-	CalculateClass(Day): string[] {
+	public CalculateClass(Day): string[] {
 		let Class: string[] = [];
 
 		if (Day == null) {

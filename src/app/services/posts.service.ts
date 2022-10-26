@@ -9,7 +9,7 @@ export class PostsService {
 	Posts;
 
 	constructor(
-		private _HttpClient: HttpClient
+		public _HttpClient: HttpClient
 	) {
 		_HttpClient.get("./../assets/data/posts.json").subscribe(data => {
 			this.Posts = data;

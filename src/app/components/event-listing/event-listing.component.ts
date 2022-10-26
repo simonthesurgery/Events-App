@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class EventListingComponent implements OnInit {
 
 	constructor(
-		private _Router: Router
+		public _Router: Router
 	) { }
 
 	ngOnInit() { }

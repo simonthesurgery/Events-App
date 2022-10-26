@@ -57,7 +57,7 @@ export class TalksPage implements OnInit {
 	RoomCount = 4
 
 	constructor(
-		private _Router: Router
+		public _Router: Router
 	) { }
 
 	ngOnInit() {

@@ -10,9 +10,10 @@ import { CommentsService } from 'src/app/services/comments.service';
 export class CommentsModal implements OnInit {
 
 	@Input() Post;
+	CommentContent;
 
 	constructor(
-		private _UsersService: UsersService
+		public _UsersService: UsersService
 	) { }
 
 	ngOnInit() {

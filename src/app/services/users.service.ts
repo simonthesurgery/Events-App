@@ -10,8 +10,8 @@ export class UsersService {
 	Users;
 
 	constructor(
-		private _HttpClient: HttpClient,
-		private _IdentityService: IdentityService
+		public _HttpClient: HttpClient,
+		public _IdentityService: IdentityService
 	) {
 		_HttpClient.get("./../assets/data/users.json").subscribe(data => {
 			this.Users = data;
@@ -19,7 +19,7 @@ export class UsersService {
 		})
 	}
 
-	GetUserData(UID, type) {
+	public GetUserData(UID, type) {
 		let Result;
 		let User;
 

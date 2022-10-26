@@ -5,10 +5,8 @@ import { Action } from 'src/app/models/actions'
 import { ModalController } from '@ionic/angular';
 import { ChatMessage } from 'src/app/models/chat-message';
 import { User } from 'src/app/models/user';
-import { Plugins, KeyboardInfo } from '@capacitor/core';
+import { Keyboard } from '@capacitor/keyboard';
 import { DatePipe } from '@angular/common';
-
-const { Keyboard } = Plugins;
 
 @Component({
 	selector: 'app-chat',
@@ -17,21 +15,21 @@ const { Keyboard } = Plugins;
 })
 export class ChatModal implements OnInit {
 
-	@ViewChild('Content', { static: true }) private Content: any;
+	@ViewChild('Content', { static: true }) public Content: any;
 
 	Messages: any[] = [];
 	MessageContent: string;
 
 	constructor(
-		private _SocketService: SocketService,
-		private _DatePipe: DatePipe,
-		private _ModalCtrl: ModalController
+		public _SocketService: SocketService,
+		public _DatePipe: DatePipe,
+		public _ModalCtrl: ModalController
 	) { }
 
 	ngOnInit() {
 		this._SocketService.InitSocket();
 
-		Keyboard.addListener("keyboardDidShow", (info: KeyboardInfo) => {
+		Keyboard.addListener("keyboardDidShow", () => {
 			this.Content.scrollToBottom(100);
 		})
 
@@ -42,11 +40,10 @@ export class ChatModal implements OnInit {
 			this.Messages.push(JSON.parse(message));
 			localStorage.setItem("messages", JSON.stringify(this.Messages));
 			this.Content.scrollToBottom(100);
-		})		
+		})
 	}
 
-	ionViewWillEnter()
-	{
+	ionViewWillEnter() {
 		this.Content.scrollToBottom(100);
 	}
 

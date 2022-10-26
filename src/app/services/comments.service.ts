@@ -9,7 +9,7 @@ export class CommentsService {
 	Comments;
 
 	constructor(
-		private _HttpClient: HttpClient
+		public _HttpClient: HttpClient
 	) {
 		_HttpClient.get("./../assets/data/comments.json").subscribe(data => {
 			this.Comments = data;

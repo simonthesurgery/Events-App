@@ -11,7 +11,7 @@ export class ModalHeaderComponent implements OnInit {
 	@Input() Title: any;
 
 	constructor(
-		private _ModalCtrl: ModalController
+		public _ModalCtrl: ModalController
 	) { }
 
 	ngOnInit() { }

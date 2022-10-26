@@ -11,8 +11,8 @@ export class TalkPage implements OnInit {
 	TalkData;
 
 	constructor(
-		private _Router: Router,
-		private _Route: ActivatedRoute
+		public _Router: Router,
+		public _Route: ActivatedRoute
 	) {
 		_Route.queryParams.subscribe(params => {
 			this.TalkData = _Router.getCurrentNavigation().extras.state.TalkData

@@ -12,9 +12,9 @@ import { CommentsModal } from 'src/app/modals/comments/comments.page';
 export class FeedComponent implements OnInit {
 
 	constructor(
-		private _UsersService: UsersService,
-		private _PostsService: PostsService,
-		private _ModalCtrl: ModalController
+		public _UsersService: UsersService,
+		public _PostsService: PostsService,
+		public _ModalCtrl: ModalController
 	) { }
 
 	ngOnInit() {}

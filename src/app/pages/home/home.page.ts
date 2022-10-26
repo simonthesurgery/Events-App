@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CventService } from 'src/app/services/cvent.service';
 
 @Component({
 	selector: 'app-home',

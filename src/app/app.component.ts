@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationExtras } from '@angular/router';
@@ -20,15 +19,13 @@ export class AppComponent {
 	Pages: any;
 
 	constructor(
-		private _Platform: Platform,
-		private _SplashScreen: SplashScreen,
-		private _StatusBar: StatusBar,
+		public _Platform: Platform,
 
-		private _HttpClient: HttpClient,
-		private _Router: Router,
-		private _UsersService: UsersService,
-		private _IdentityService: IdentityService,
-		private _CommentsService: CommentsService
+		public _HttpClient: HttpClient,
+		public _Router: Router,
+		public _UsersService: UsersService,
+		public _IdentityService: IdentityService,
+		public _CommentsService: CommentsService
 	) {
 		this.initializeApp();
 
@@ -39,8 +36,7 @@ export class AppComponent {
 
 	initializeApp() {
 		this._Platform.ready().then(() => {
-			this._StatusBar.styleDefault();
-			this._SplashScreen.hide();
+			StatusBar.setStyle({ style: Style.Default });
 		});
 	}
 
