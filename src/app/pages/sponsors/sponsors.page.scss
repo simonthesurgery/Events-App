@@ -3,9 +3,17 @@
 	width: 100%;
 	flex-flow: row wrap;
 
-	img {
-		max-width: 25vw;
-		max-height: 25vw;
+	.sponsor {
+		width: 25vw;
+		height: 25vw;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		image {
+			width: 100%;
+		}
 	}
 }
 
